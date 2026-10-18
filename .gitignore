@@ -1,0 +1,15 @@
+node_modules/
+.data/
+.env
+.env.local
+*.log
+tmp/
+dist/
+
+# Python sidecar
+**/.venv/
+__pycache__/
+*.pyc
+
+# Local test artifacts
+.playwright-mcp/

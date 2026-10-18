@@ -1,0 +1,36 @@
+{
+  "name": "web-fetch-tool",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Multi-channel web content fetch, process and archive toolkit (API + Telegram bot)",
+  "scripts": {
+    "dev": "bun run --watch src/server.ts",
+    "start": "bun run src/server.ts",
+    "migrate": "bun run scripts/migrate.ts",
+    "token:create": "bun run scripts/create-token.ts",
+    "smoke": "bun run scripts/smoke.ts",
+    "search": "bun run scripts/search.ts",
+    "tg:sim": "bun run scripts/telegram-sim.ts",
+    "tg:set-webhook": "bun run scripts/tg-set-webhook.ts",
+    "test": "bun test",
+    "test:pg": "bun run scripts/test-pg.ts",
+    "typecheck": "bunx tsc --noEmit"
+  },
+  "dependencies": {
+    "@electric-sql/pglite": "^0.5.10",
+    "@mozilla/readability": "^0.6.0",
+    "defuddle": "^0.19.5",
+    "linkedom": "^0.18.13",
+    "pg": "^8.23.1",
+    "turndown": "^7.2.4",
+    "turndown-plugin-gfm": "^1.0.2",
+    "zod": "^4.4.3"
+  },
+  "devDependencies": {
+    "@types/bun": "^1.2.22",
+    "@types/pg": "^8.15.5",
+    "@types/turndown": "^5.0.6",
+    "typescript": "^5.9.3"
+  }
+}
